@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Belajar TailwindCSS</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="dark:bg-slate-800 dark:text-slate-200">
+    <h1 class="text-6xl font-bold text-center my-10">
+      Mari Belajar
+      <span
+        class="bg-gradient-to-r from-blue-500 to-teal-500 bg-clip-text text-transparent"
+      >
+        TailwindCSS
+      </span>
+    </h1>
+
+    <hr class="my-20" />
+
+    <div class="flex justify-center my-10">
+      <span class="text-xs text-slate-500 dark:text-white mr-2">Light</span>
+      <input type="checkbox" class="hidden" id="toggle" />
+      <label for="toggle">
+        <div
+          class="flex items-center w-10 h-5 bg-slate-500 rounded-full cursor-pointer p-1"
+        >
+          <div
+            class="toggle-circle w-4 h-4 bg-white rounded-full dark:translate-x-4"
+          ></div>
+        </div>
+      </label>
+      <span class="text-xs text-slate-500 dark:text-white ml-2">Dark</span>
+    </div>
+
+    <div
+      class="max-w-lg my-10 border rounded-xl border-slate-200 shadow-md font-inter mx-auto p-5 hover:bg-sky-500 group dark:hover:bg-slate-300"
+    >
+      <h5
+        class="font-bold text-slate-700 text-lg mb-3 group-hover:text-white dark:group:hover:text-slate-800"
+      >
+        My Card
+      </h5>
+      <p
+        class="text-slate-500 group-hover:text-white selection:bg-lime-300 selection:text-slate-900 first-line:uppercase first-line:tracking-widest first-letter:text-7xl first-letter:float-left first-letter:mr-3 dark:group-hover:text-slate-800"
+      >
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore sed
+        placeat quibusdam nam nihil fugit animi maiores in incidunt provident,
+        alias quas laboriosam laborum corporis atque dolorum ea enim ut quaerat
+        vero pariatur dolores optio. Porro hic ab doloribus suscipit cum
+        accusamus eos dolor quia quaerat quis, quisquam ducimus exercitationem.
+      </p>
+    </div>
+
+    <div
+      class="max-w-lg border border-slate-200 rounded-xl mx-auto shadow-md font-inter p-5"
+    >
+      <form action="">
+        <label for="email">
+          <span
+            class="block font-semibold mb-1 text-slate-700 after:content-['*'] after:text-pink-500 after:ml-0.5"
+            >Email</span
+          >
+          <input
+            type="email"
+            placeholder="masukkan email..."
+            class="px-3 py-2 border shadow rounded w-full block text-sm placeholder:text-slate-400 focus:outline-none focus:ring-1 focus:ring-sky-500 focus:border-sky-500 invalid:text-pink-700 invalid:focus:ring-pink-700 invalid:focus:border-pink-700 peer"
+          />
+          <p class="text-sm m-1 text-pink-700 invisible peer-invalid:visible">
+            email tidak valid
+          </p>
+        </label>
+      </form>
+    </div>
+
+    <button
+      class="my-10 bg-sky-500 px-5 py-2 rounded-full text-white font-semibold font-inter block mx-auto hover:bg-sky-600 active:bg-sky-700 focus:ring-sky-300 dark:text-slate-800 dark:hover:text-slate-900 dark:bg-slate-300 dark:hover:bg-slate-100"
+    >
+      Simpan
+    </button>
+
+    <div class="mb-96"></div>
+
+    <script>
+      const checkbox = document.querySelector("#toggle");
+      const html = document.querySelector("html");
+
+      checkbox.addEventListener("click", function () {
+        checkbox.checked
+          ? html.classList.add("dark")
+          : html.classList.remove("dark");
+      });
+    </script>
+  </body>
+</html>
