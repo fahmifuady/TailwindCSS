@@ -155,6 +155,53 @@
       </div>
     </div>
 
+    <h1 class="text-center font-semibold text-2xl mt-10">
+      transform: transform-origin; transition: delay
+    </h1>
+    <div class="flex justify-center">
+      <div
+        class="w-40 h-40 bg-sky-500 mx-5 rounded-lg shadow-lg p-5 my-5 hover:rotate-180 hover:bg-green-500 origin-top-left"
+      >
+        <p>BAD USAGE</p>
+        <p>rotate-180</p>
+        <p>bg-green-500</p>
+        <p>origin-top-left</p>
+      </div>
+
+      <div
+        class="w-40 h-40 bg-sky-500 mx-5 rounded-lg shadow-lg p-5 my-5 hover:rotate-180 hover:bg-green-500 origin-top-left transition duration-1000"
+      >
+        <p>BAD USAGE</p>
+        <p>rotate-180</p>
+        <p>bg-green-500</p>
+        <p>origin-top-left</p>
+        <p>transition</p>
+      </div>
+
+      <div class="w-40 h-40 mx-5 rounded-lg shadow-lg my-5 group">
+        <div
+          class="w-full h-full bg-sky-500 rounded-lg shadow-lg p-5 group-hover:rotate-180 group-hover:bg-green-500 origin-top-left"
+        >
+          <p>GOOD USAGE</p>
+          <p>rotate-180</p>
+          <p>bg-green-500</p>
+          <p>origin-top-left</p>
+        </div>
+      </div>
+
+      <div class="w-40 h-40 mx-5 rounded-lg shadow-lg my-5 group">
+        <div
+          class="w-full h-full bg-sky-500 rounded-lg shadow-lg p-5 group-hover:rotate-180 group-hover:bg-green-500 origin-top-left transition duration-1000"
+        >
+          <p>GOOD USAGE</p>
+          <p>rotate-180</p>
+          <p>bg-green-500</p>
+          <p>origin-top-left</p>
+          <p>transition</p>
+        </div>
+      </div>
+    </div>
+
     <div class="mb-96"></div>
 
     <script>
