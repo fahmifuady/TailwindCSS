@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Belajar TailwindCSS</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="dark:bg-slate-800 dark:text-slate-200">
+    <h1 class="text-6xl font-bold text-center my-10">
+      Mari Belajar
+      <span
+        class="bg-gradient-to-r from-blue-500 to-teal-500 bg-clip-text text-transparent"
+      >
+        TailwindCSS
+      </span>
+    </h1>
+
+    <hr class="my-20" />
+
+    <div class="flex justify-center my-10">
+      <span class="text-xs text-slate-500 dark:text-white mr-2">Light</span>
+      <input type="checkbox" class="hidden" id="toggle" />
+      <label for="toggle">
+        <div
+          class="flex items-center w-10 h-5 bg-slate-500 rounded-full cursor-pointer p-1"
+        >
+          <div
+            class="toggle-circle w-4 h-4 bg-white rounded-full dark:translate-x-4"
+          ></div>
+        </div>
+      </label>
+      <span class="text-xs text-slate-500 dark:text-white ml-2">Dark</span>
+    </div>
+
+    <hr class="my-20" />
+
+    <div class="mb-96"></div>
+
+    <script>
+      const checkbox = document.querySelector("#toggle");
+      const html = document.querySelector("html");
+
+      checkbox.addEventListener("click", function () {
+        checkbox.checked
+          ? html.classList.add("dark")
+          : html.classList.remove("dark");
+      });
+    </script>
+  </body>
+</html>
