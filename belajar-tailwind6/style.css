@@ -659,6 +659,14 @@ video {
   margin-right: auto;
 }
 
+.mt-20 {
+  margin-top: 5rem;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
 .flex {
   display: flex;
 }
@@ -702,6 +710,11 @@ video {
 
 .cursor-pointer {
   cursor: pointer;
+}
+
+.columns-3 {
+  -moz-columns: 3;
+       columns: 3;
 }
 
 .items-center {
