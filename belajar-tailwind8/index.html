@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Belajar TailwindCSS</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="dark:bg-slate-800 dark:text-slate-200">
+    <h1 class="text-6xl font-bold text-center my-10">
+      Mari Belajar
+      <span
+        class="bg-gradient-to-r from-blue-500 to-teal-500 bg-clip-text text-transparent"
+      >
+        TailwindCSS
+      </span>
+    </h1>
+
+    <hr class="my-20" />
+
+    <div class="flex justify-center my-10">
+      <span class="text-xs text-slate-500 dark:text-white mr-2">Light</span>
+      <input type="checkbox" class="hidden" id="toggle" />
+      <label for="toggle">
+        <div
+          class="flex items-center w-10 h-5 bg-slate-500 rounded-full cursor-pointer p-1"
+        >
+          <div
+            class="toggle-circle w-4 h-4 bg-white rounded-full dark:translate-x-4"
+          ></div>
+        </div>
+      </label>
+      <span class="text-xs text-slate-500 dark:text-white ml-2">Dark</span>
+    </div>
+
+    <hr class="my-20" />
+
+    <h1 class="text-center font-semibold text-2xl my-10">Flexbox</h1>
+
+    <hr class="my-24" />
+
+    <!-- class="container px-6 font-inter max-w-md mx-auto sm:bg-red-200 md:bg-pink-200 lg:bg-blue-200 xl:bg-green-200 2xl:bg-transparent" -->
+    <div
+      class="container px-6 font-inter max-w-md mx-auto sm:max-w-xl md:max-w-5xl"
+    >
+      <h3 class="text-4xl font-bold text-slate-800 sm:text-5xl md:text-6xl">
+        Fahmi <span class="text-sky-800">Fuad</span>y
+      </h3>
+      <img
+        src="https://source.unsplash.com/1280x960?laptop"
+        alt="laptop"
+        class="mt-4 rounded-xl shadow-xl sm:mt-6 sm:h-64 sm:w-full sm:object-cover"
+      />
+      <h2
+        class="mt-6 text-2xl font-semibold text-slate-800 sm:mt-8 sm:text-4xl"
+      >
+        belong to night workers people
+      </h2>
+      <p class="mt-2 text-slate-600 sm:mt-4 sm:text-xl">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam unde
+        ea provident, quos quam ex iusto blanditiis consequatur modi officia
+        minus reiciendis perferendis harum, saepe iure cumque quo asperiores
+        vitae odio nam, hic dignissimos natus voluptatibus.
+      </p>
+      <div class="mt-4 sm:mt-6">
+        <a
+          href="#"
+          class="inline-block px-5 py-3 bg-red-600 text-white rounded-lg shadow-lg uppercase font-semibold tracking-wider text-sm sm:text-base"
+          >Show more</a
+        >
+      </div>
+    </div>
+    <div class="mb-96"></div>
+
+    <script>
+      const checkbox = document.querySelector("#toggle");
+      const html = document.querySelector("html");
+
+      checkbox.addEventListener("click", function () {
+        checkbox.checked
+          ? html.classList.add("dark")
+          : html.classList.remove("dark");
+      });
+    </script>
+  </body>
+</html>
