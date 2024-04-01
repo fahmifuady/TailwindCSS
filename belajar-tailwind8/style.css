@@ -910,6 +910,10 @@ video {
     margin-top: 2rem;
   }
 
+  .sm\:mb-0 {
+    margin-bottom: 0px;
+  }
+
   .sm\:flex {
     display: flex;
   }
@@ -974,6 +978,10 @@ video {
 }
 
 @media (min-width: 768px) {
+  .md\:w-80 {
+    width: 20rem;
+  }
+
   .md\:max-w-5xl {
     max-width: 64rem;
   }
@@ -1004,6 +1012,10 @@ video {
 
   .lg\:w-1\/2 {
     width: 50%;
+  }
+
+  .lg\:w-72 {
+    width: 18rem;
   }
 
   .lg\:max-w-full {
