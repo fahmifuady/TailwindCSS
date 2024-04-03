@@ -534,6 +534,10 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
+.col-start-2 {
+  grid-column-start: 2;
+}
+
 .my-10 {
   margin-top: 2.5rem;
   margin-bottom: 2.5rem;
@@ -770,6 +774,10 @@ video {
 
   .md\:col-start-4 {
     grid-column-start: 4;
+  }
+
+  .md\:col-start-3 {
+    grid-column-start: 3;
   }
 
   .md\:row-start-2 {
