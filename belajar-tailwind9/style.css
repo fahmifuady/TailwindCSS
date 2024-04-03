@@ -581,6 +581,10 @@ video {
   aspect-ratio: 1 / 1;
 }
 
+.aspect-\[4\/3\] {
+  aspect-ratio: 4/3;
+}
+
 .h-4 {
   height: 1rem;
 }
@@ -623,6 +627,10 @@ video {
 
 .rounded-full {
   border-radius: 9999px;
+}
+
+.rounded-lg {
+  border-radius: 0.5rem;
 }
 
 .bg-slate-500 {
