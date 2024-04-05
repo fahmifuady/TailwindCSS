@@ -21,3 +21,10 @@
     @apply w-full h-full bg-cover bg-center absolute group-hover:scale-125 transition-all duration-500;
   }
 }
+
+@layer utilities {
+  .function {
+    /* using text-badass is permissible but make color property converted to rgba value instead of using defined value (#bada55) */
+    color: theme(colors.badass);
+  }
+}

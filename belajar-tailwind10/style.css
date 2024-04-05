@@ -815,6 +815,11 @@ h1 {
   color: transparent;
 }
 
+.function {
+  /* using text-badass is permissible but make color property converted to rgba value instead of using defined value (#bada55) */
+  color: #bada55;
+}
+
 /* modifiying default style can be done in base layer */
 
 /* modifiying or make components can be done in components layer */
