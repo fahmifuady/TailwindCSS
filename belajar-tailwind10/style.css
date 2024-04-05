@@ -544,12 +544,52 @@ h1 {
   --tw-backdrop-sepia:  ;
 }
 
-.absolute {
-  position: absolute;
+.grid-card {
+  /* group utility cannot apply here */
+  position: relative;
+  aspect-ratio: 4/3;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(34 197 94 / var(--tw-bg-opacity));
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 500ms;
 }
 
-.relative {
-  position: relative;
+.grid-card:hover {
+  --tw-scale-x: .95;
+  --tw-scale-y: .95;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+@media (min-width: 768px) {
+  .grid-card {
+    aspect-ratio: 3/4;
+  }
+}
+
+@media (min-width: 1280px) {
+  .grid-card {
+    aspect-ratio: 4/3;
+  }
+}
+
+.grid-card-img {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 500ms;
+}
+
+.group:hover .grid-card-img {
+  --tw-scale-x: 1.25;
+  --tw-scale-y: 1.25;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .my-10 {
@@ -591,10 +631,6 @@ h1 {
   display: none;
 }
 
-.aspect-\[4\/3\] {
-  aspect-ratio: 4/3;
-}
-
 .h-4 {
   height: 1rem;
 }
@@ -603,20 +639,12 @@ h1 {
   height: 1.25rem;
 }
 
-.h-full {
-  height: 100%;
-}
-
 .w-10 {
   width: 2.5rem;
 }
 
 .w-4 {
   width: 1rem;
-}
-
-.w-full {
-  width: 100%;
 }
 
 .cursor-pointer {
@@ -647,25 +675,12 @@ h1 {
   align-self: center;
 }
 
-.overflow-hidden {
-  overflow: hidden;
-}
-
 .scroll-smooth {
   scroll-behavior: smooth;
 }
 
 .rounded-full {
   border-radius: 9999px;
-}
-
-.rounded-lg {
-  border-radius: 0.5rem;
-}
-
-.bg-green-500 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(34 197 94 / var(--tw-bg-opacity));
 }
 
 .bg-slate-500 {
@@ -732,17 +747,9 @@ h1 {
   --tw-gradient-to: #14b8a6 var(--tw-gradient-to-position);
 }
 
-.bg-cover {
-  background-size: cover;
-}
-
 .bg-clip-text {
   -webkit-background-clip: text;
           background-clip: text;
-}
-
-.bg-center {
-  background-position: center;
 }
 
 .p-1 {
@@ -808,29 +815,9 @@ h1 {
   color: transparent;
 }
 
-.transition-all {
-  transition-property: all;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
-}
-
-.duration-500 {
-  transition-duration: 500ms;
-}
-
 /* modifiying default style can be done in base layer */
 
-.hover\:scale-95:hover {
-  --tw-scale-x: .95;
-  --tw-scale-y: .95;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.group:hover .group-hover\:scale-125 {
-  --tw-scale-x: 1.25;
-  --tw-scale-y: 1.25;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
+/* modifiying or make components can be done in components layer */
 
 :is(.dark .dark\:translate-x-4) {
   --tw-translate-x: 1rem;
@@ -873,21 +860,11 @@ h1 {
     display: flex;
   }
 
-  .md\:aspect-\[3\/4\] {
-    aspect-ratio: 3/4;
-  }
-
   .md\:grid-cols-4 {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
   .md\:p-4 {
     padding: 1rem;
-  }
-}
-
-@media (min-width: 1280px) {
-  .xl\:aspect-\[4\/3\] {
-    aspect-ratio: 4/3;
   }
 }
