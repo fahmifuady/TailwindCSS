@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* modifiying default style can be done in base layer */
+@layer base {
+  h1 {
+    /* to use any exiting classes into custom css, use @apply*/
+    @apply text-center font-semibold text-2xl my-10;
+  }
+}

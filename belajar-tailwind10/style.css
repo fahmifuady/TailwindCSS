@@ -434,6 +434,16 @@ video {
   display: none;
 }
 
+h1 {
+  /* to use any exiting classes into custom css, use @apply*/
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+  text-align: center;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 600;
+}
+
 *, ::before, ::after {
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
@@ -751,11 +761,6 @@ video {
   font-family: Inter;
 }
 
-.text-2xl {
-  font-size: 1.5rem;
-  line-height: 2rem;
-}
-
 .text-6xl {
   font-size: 3.75rem;
   line-height: 1;
@@ -812,6 +817,8 @@ video {
 .duration-500 {
   transition-duration: 500ms;
 }
+
+/* modifiying default style can be done in base layer */
 
 .hover\:scale-95:hover {
   --tw-scale-x: .95;
